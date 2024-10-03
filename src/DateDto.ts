@@ -1,6 +1,7 @@
 export class DateDto{
 
-  id: string;
-
+  fid:"string";
+  psw :"string";
+  country : string;
 
 }

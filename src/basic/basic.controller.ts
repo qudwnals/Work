@@ -1,6 +1,7 @@
 import {Body, Controller, Post} from '@nestjs/common';
 import { BasicService } from './basic.service';
 import {DateDto} from "../DateDto";
+import {resultDto} from "../ResultDto";
 
 @Controller('basic')
 export class BasicController {
@@ -10,7 +11,7 @@ export class BasicController {
     this.basicService = basicService;
   }
 
-  @Post()
+  @Post('create')
   create(@Body() body:DateDto){
     return this.basicService.create(body);
   }
